@@ -2,13 +2,27 @@
   "name": "@kerbojs/core",
   "version": "0.1.0-alpha.1",
   "description": "KerbolJS CLI",
-  "main": "dist/index.js",
+  "author": "KerboJS Team",
+  "homepage": "https://github.com/kerbojs/kerbojs/tree/next/code/lib/core",
+  "repository": {
+    "directory": "lib/core",
+    "type": "git",
+    "url": "https://github.com/kerbojs/kerbojs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kerbojs/kerbojs/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "kerbojs"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
     "watch": "nodemon --exec \"npm run build\" -e ts"
   },
-  "keywords": [],
-  "author": "KerboJS Team",
-  "license": "MIT"
+  "dependencies": {
+    "@kerbojs/types": "^0.1.0-alpha.1"
+  },
+  "main": "dist/index.js"
 }

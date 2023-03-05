@@ -1,10 +1,10 @@
-import { KjsConfig } from '@kjs/types'
+import { Config } from '@kerbojs/types'
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'fs'
 import path from 'path'
 
 const rootPath = path.resolve('.')
 
-let config: KjsConfig = {}
+let config: Config = {}
 
 function main() {
   // console.log(process.argv)
@@ -74,4 +74,4 @@ function setSource() {
   }
 }
 
-export default main
+main()
