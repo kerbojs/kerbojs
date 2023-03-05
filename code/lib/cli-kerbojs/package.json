@@ -1,0 +1,20 @@
+{
+  "name": "kerbojs",
+  "version": "0.1.0-alpha.1",
+  "description": "KerbolJS CLI",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "kerbojs"
+  ],
+  "author": "KerboJS Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kerbojs/kerbojs.git",
+    "directory": "lib/cli"
+  },
+  "bin": "index.js"
+}
