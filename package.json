@@ -1,11 +1,5 @@
 {
-  "name": "kjs",
-  "version": "0.1.0-alpha.0",
-  "description": "Converts js to kerbol scripts",
-  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }

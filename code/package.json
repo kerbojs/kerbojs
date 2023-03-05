@@ -1,7 +1,11 @@
 {
-  "name": "@kjs/root",
-  "version": "0.1.0-alpha.0",
+  "name": "@kerbojs/root",
+  "version": "0.1.0-alpha.1",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kerbojs/kerbojs.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,6 +18,6 @@
     "typescript": "^4.9.5"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18.14.0"
   }
 }
