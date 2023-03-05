@@ -1,0 +1,30 @@
+{
+  "name": "@kerbojs/cli",
+  "version": "0.1.0-alpha.1",
+  "description": "KerbolJS's CLI",
+  "author": "KerboJS Team",
+  "homepage": "https://github.com/kerbojs/kerbojs/tree/next/code/lib/cli",
+  "repository": {
+    "directory": "lib/cli",
+    "type": "git",
+    "url": "https://github.com/kerbojs/kerbojs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kerbojs/kerbojs/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "kerbojs"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@kerbojs/core": "^0.1.0-alpha.1"
+  },
+  "bin": {
+    "kerbojs": "index.js"
+  },
+  "main": "index.js"
+}
