@@ -1,12 +1,14 @@
 {
-  "name": "@kjs/types",
-  "version": "0.1.0-alpha.0",
-  "description": "",
+  "name": "@kerbojs/types",
+  "version": "0.1.0-alpha.1",
+  "description": "Core KerboJS types",
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "kerbojs"
+  ],
+  "author": "KerboJS Team",
+  "license": "MIT"
 }

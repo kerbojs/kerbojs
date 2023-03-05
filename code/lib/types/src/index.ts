@@ -1,4 +1,4 @@
-export type KjsConfig = {
+export type Config = {
   outDir?: string
   source?: string
 }
