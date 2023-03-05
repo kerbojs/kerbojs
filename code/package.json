@@ -1,0 +1,19 @@
+{
+  "name": "@kjs/root",
+  "version": "0.1.0-alpha.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/node": "^18.14.6",
+    "eslint": "^8.35.0",
+    "nodemon": "^2.0.21",
+    "prettier": "^2.8.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
