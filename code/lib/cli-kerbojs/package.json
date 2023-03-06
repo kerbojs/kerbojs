@@ -1,20 +1,29 @@
 {
   "name": "kerbojs",
   "version": "0.1.0-alpha.1",
-  "description": "KerbolJS CLI",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "cli",
-    "kerbojs"
-  ],
+  "description": "KerboJS CLI",
   "author": "KerboJS Team",
-  "license": "MIT",
+  "homepage": "https://github.com/kerbojs/kerbojs/tree/next/code/lib/core",
   "repository": {
     "type": "git",
     "url": "https://github.com/kerbojs/kerbojs.git",
     "directory": "lib/cli"
   },
-  "bin": "index.js"
+  "bugs": {
+    "url": "https://github.com/kerbojs/kerbojs/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "kerbojs"
+  ],
+  "scripts": {
+    "build": "rm -rf dist/ && tsc -b tsconfig.build.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon --exec \"npm run build\" -e ts"
+  },
+  "dependencies": {
+    "@kerbojs/cli": "^0.1.0-alpha.1"
+  },
+  "bin": "dist/cli.js"
 }
