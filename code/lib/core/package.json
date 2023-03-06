@@ -1,7 +1,7 @@
 {
   "name": "@kerbojs/core",
   "version": "0.1.0-alpha.1",
-  "description": "KerbolJS CLI",
+  "description": "KerboJS",
   "author": "KerboJS Team",
   "homepage": "https://github.com/kerbojs/kerbojs/tree/next/code/lib/core",
   "repository": {
