@@ -1,9 +1,15 @@
 import { Config } from '@kerbojs/types'
-import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'fs'
+import { existsSync, mkdirSync, readFileSync, rmSync } from 'fs'
 import path from 'path'
+import build from './build'
 
 const rootPath = path.resolve('.')
 
+/**
+ * TODO:
+ * * Get content from source file
+ * * Translate JS to kerboscript
+ */
 function main() {
   const userConfig: Config = loadUserConfig()
   const config: Required<Config> = {
@@ -13,17 +19,6 @@ function main() {
   // console.log(config)
   clearOutDir(config)
   build(config)
-}
-
-function build(config: Required<Config>) {
-  const sourceFileName = path.parse(config.source).name
-  const buildFilePath = path.join(config.outDir, sourceFileName + '.ks')
-
-  // Dummy data for the build file
-  const content = 'print "TEST".\n'
-
-  // Write a dummy `${config.outDir}/${sourceFileName}.ks` file
-  writeFileSync(buildFilePath, content, 'utf8')
 }
 
 /**
@@ -67,7 +62,9 @@ function getSource(): string {
  * @returns {Config}
  */
 function loadUserConfig(): Config {
-  const configPath = path.join(rootPath, '.kjsrc')
+  const configPath = path.join(rootPath, '.kerbojsrc')
+  console.log('loading')
+  console.log(configPath)
 
   if (existsSync(configPath)) {
     const rawData = readFileSync(configPath, 'utf8')
