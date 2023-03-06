@@ -1,4 +1,4 @@
-import { Config } from '@kerbojs/types'
+import { Config, Userconfig } from '@kerbojs/types'
 import { existsSync, mkdirSync, readFileSync, rmSync } from 'fs'
 import path from 'path'
 import build from './build'
@@ -11,12 +11,14 @@ const rootPath = path.resolve('.')
  * * Translate JS to kerboscript
  */
 function main() {
-  const userConfig: Config = loadUserConfig()
-  const config: Required<Config> = {
+  const userConfig: Userconfig = loadUserConfig()
+  const config: Config = {
     outDir: getOutDir(userConfig),
-    source: getSource(),
+    sourceFile: getSource(),
   }
-  // console.log(config)
+
+  console.log({ config })
+
   clearOutDir(config)
   build(config)
 }
@@ -35,15 +37,17 @@ function clearOutDir(config: Required<Config>): void {
 
 /**
  * Get the full path to project outDir.
- * @returns {string}
+ * @returns {String}
  */
-function getOutDir(userConfig: Config): string {
-  if (userConfig.outDir) {
-    return path.join(rootPath, userConfig.outDir)
-  }
-  return path.join(rootPath, 'dist')
+function getOutDir(userConfig: Userconfig): string {
+  return path.join(rootPath, userConfig.compilerOptions?.outDir || 'dist')
 }
 
+/**
+ * TODO:
+ * * Implement Userconfig.files
+ * @returns {String}
+ */
 function getSource(): string {
   const source = process.argv[2] || null
   if (source && typeof source === 'string') {
@@ -61,11 +65,8 @@ function getSource(): string {
  * Looks for a .kjsrc file in the project and returns its configuration if available.
  * @returns {Config}
  */
-function loadUserConfig(): Config {
+function loadUserConfig(): Userconfig {
   const configPath = path.join(rootPath, '.kerbojsrc')
-  console.log('loading')
-  console.log(configPath)
-
   if (existsSync(configPath)) {
     const rawData = readFileSync(configPath, 'utf8')
     return JSON.parse(rawData)
