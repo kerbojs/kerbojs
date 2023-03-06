@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Userconfig",
+  "title": "Schema for .kerbojsrc",
   "type": "object",
   "properties": {
     "compilerOptions": {
