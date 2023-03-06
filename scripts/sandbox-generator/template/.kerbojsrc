@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/kerbojs/kerbojs/next/code/lib/cli-kerbojs/src/kerbojsrc.json",
+  "compilerOptions": {
+    "outDir": "build"
+  },
+  "files": [
+    "src/index.js"
+  ]
+}

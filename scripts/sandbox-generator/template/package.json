@@ -1,0 +1,10 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "kerbojs src/index.js"
+  },
+  "dependencies": {
+    "kerbojs": "^0.1.0-alpha.1"
+  }
+}
