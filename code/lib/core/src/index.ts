@@ -19,8 +19,27 @@ function main() {
 
   console.log({ config })
 
+  // Load file
+  const rawData = readFileSync(config.sourceFile, 'utf8')
+  // Parse file
+  const stringData = JSON.stringify(rawData)
+  console.log('stringData: ' + stringData)
+  const trimmed = trimStringData(stringData)
+  console.log('trimmed: ' + trimmed)
+  const lines: string[] = trimmed.split('<break>')
+  console.log(lines)
+
   clearOutDir(config)
   build(config)
+}
+
+function trimStringData(data: string): string {
+  return data
+    .trim()
+    .replace(/\"/g, '')
+    .replace(/^\\n/, '')
+    .replace(/\\n$/, '')
+    .replace(/(\\n){1,}/g, '<break>')
 }
 
 /**
