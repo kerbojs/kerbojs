@@ -17,7 +17,7 @@
     "kerbojs"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist/ && tsc -b tsconfig.build.json",
     "start": "node dist/index.js",
     "watch": "nodemon --exec \"npm run build\" -e ts"
   },
