@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74550679/223182237-5c6c4ea3-9343-4087-8237-35afb2590725.svg">
+  <img src="https://user-images.githubusercontent.com/74550679/223450591-cf1b1384-9e85-4ce3-8646-a8e429a87627.svg" width="230">
 </p>
 
 # KerboJS
