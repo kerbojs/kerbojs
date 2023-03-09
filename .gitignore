@@ -2,3 +2,5 @@ build
 dist
 node_modules
 sandbox
+
+.DS_Store
