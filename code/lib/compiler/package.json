@@ -1,0 +1,29 @@
+{
+  "name": "@kerbojs/compiler",
+  "version": "0.1.0-alpha.1",
+  "description": "The JavaScript compiler",
+  "author": "KerboJS Team",
+  "homepage": "https://kerbojs.dev",
+  "repository": {
+    "directory": "lib/compiler",
+    "type": "git",
+    "url": "https://github.com/kerbojs/kerbojs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kerbojs/kerbojs/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "compiler",
+    "kerbojs"
+  ],
+  "scripts": {
+    "build": "rm -rf dist/ && tsc -b tsconfig.build.json",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "main": "dist/index.js"
+}
