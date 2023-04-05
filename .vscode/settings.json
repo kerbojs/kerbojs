@@ -23,7 +23,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "[typescriptreact]": {
+  "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
@@ -36,12 +36,7 @@
   "editor.formatOnSave": false,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "typescript", "vue"],
   "files.eol": "\n",
   "prettier.configPath": ".prettierrc"
 }
