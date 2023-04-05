@@ -1,0 +1,29 @@
+{
+  "name": "@kerbojs/lexer",
+  "version": "0.1.0-alpha.1",
+  "description": "The KerboJs lexer analyzer",
+  "keywords": [
+    "kerbojs"
+  ],
+  "author": "KerboJS Team",
+  "homepage": "https://kerbojs.dev",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerbojs/kerbojs.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/kerbojs/kerbojs/issues"
+  }
+}
